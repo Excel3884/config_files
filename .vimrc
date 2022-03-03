@@ -1,5 +1,5 @@
 set clipboard=unnamed
-set guifont=Source\ Code\ Pro\ 18
+set guifont=Fira\ Code\ 18
 set encoding=utf-8
 
 
@@ -41,7 +41,6 @@ syntax on
 " plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'lifepillar/vim-solarized8'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'terryma/vim-multiple-cursors'
@@ -52,7 +51,6 @@ Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'vimwiki/vimwiki'
-" Plug 'vim-latex/vim-latex'
 Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
 
@@ -76,17 +74,21 @@ autocmd FileType python setlocal completeopt-=preview
 "theme
 colorscheme gruvbox
 set background=dark
-" set termguicolors
 
-"disable arrow keys
-map <Down> <NOP>
-map <Up> <NOP>
-map <Left> <NOP>
-map <Right> <NOP>
+"disable arrow keys (normal mode)
+noremap <Down> <NOP>
+noremap <Up> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+"disable arrow keys (insert mode)
+noremap! <Down> <NOP>
+noremap! <Up> <NOP>
+noremap! <Left> <NOP>
+noremap! <Right> <NOP>
 
 " esc alt
 inore jj <Esc>
-inore ξξ <Esc>
 
 
 " sets tab size to 4 spaces
