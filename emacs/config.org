@@ -1,0 +1,246 @@
+#+begin_src emacs-lisp
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives
+	     '("melpa"."https://melpa.org/packages/"))
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(unless (package-installed-p 'monokai-pro-theme)
+  (package-refresh-contents)
+  (package-install 'monokai-pro-theme))
+
+(use-package beacon
+  :ensure t
+  :init
+  (beacon-mode 1))
+
+(use-package which-key
+  :ensure t
+  :init
+  (which-key-mode))
+
+(setq inhibit-startup-message t)
+
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+;(menu-bar-mode -1)
+
+
+
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+(setq ring-bell-function 'ignore)
+
+(when window-system (global-hl-line-mode t))
+
+(when window-system (global-prettify-symbols-mode t))
+
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode))))
+
+(setq ido-enable-flex-matchin nil)
+(setq ido-create-buffer 'always)
+(setq ido-everywhere t)
+(ido-mode 1)
+
+(use-package ido-vertical-mode
+  :ensure t
+  :init
+  (ido-vertical-mode 1))
+(setq ido-vertical-define-keys 'C-n-and-C-p-only)
+
+(use-package smex
+  :ensure t
+  :init (smex-initialize)
+  :config
+  :bind ("M-x" . smex))
+
+(use-package avy
+  :ensure t
+  :bind
+  ("M-s" . avy-goto-char))
+
+(defun init-visit()
+  (interactive)
+  (find-file "~/.emacs.d/config.org"))
+(global-set-key (kbd "C-c e") 'init-visit)
+
+(use-package rainbow-mode
+  :ensure t
+  :init (rainbow-mode 1))
+
+(define-globalized-minor-mode my-global-rainbow-mode rainbow-mode
+  (lambda () (rainbow-mode 1)))
+
+(my-global-rainbow-mode 1)
+
+(use-package switch-window
+  :ensure t
+  :config
+  (setq switch-window-input-style 'minibuffer)
+  (setq switch-window-increase 4)
+  (setq switch-window-threshold 2)
+  (setq switch-window-shortcut-style 'qwerty)
+  (setq switch-window-qwerty-shortcuts
+	'("a" "s" "d" "f" "j" "k" "l"))
+  :bind
+  ([remap other-window] . switch-window))
+
+(defun split-and-follow-horizontally()
+  (interactive)
+  (split-window-below)
+  (balance-windows)
+  (other-window 1))
+(global-set-key (kbd "C-x 2") 'split-and-follow-horizontally)
+
+(defun split-and-follow-vertically()
+  (interactive)
+  (split-window-right)
+  (balance-windows)
+  (other-window 1))
+(global-set-key (kbd "C-x 3") 'split-and-follow-vertically)
+
+(setq org-src-window-setup 'current-window)
+
+(global-subword-mode 1)
+
+(setq electric-pair-pairs '(
+			    (?\( . ?\))
+			    (?\[ . ?\])
+			    ))
+(electric-pair-mode t)
+
+(defun kill-whole-word()
+  (interactive)
+  (backward-word)
+  (kill-word 1)
+  )
+(global-set-key (kbd "C-c w w") 'kill-whole-word)
+
+(line-number-mode 1)
+(column-number-mode 1)
+
+
+(global-set-key (kbd "C-x b") 'ibuffer)
+
+(setq ibuffer-expert t)
+
+
+(defun copy-whole-line()
+  (interactive)
+  (save-excursion
+    (kill-new
+     (buffer-substring
+      (point-at-bol)
+      (point-at-eol)))))
+(global-set-key (kbd "C-c w l") 'copy-whole-line)
+
+(use-package rainbow-delimiters
+  :ensure t
+  :init
+  (rainbow-delimiters-mode 1))
+
+;;dashboard
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook)
+  (setq dashboard-items '((recents . 10)))
+  (setq dashboard-banner-logo-title "Welcome back, Angelos")
+)
+
+;;auto-completion
+(use-package company
+  :ensure t
+  :init
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 1)
+  (add-hook 'after-init-hook  'global-company-mode))
+
+
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous))
+
+(use-package spaceline
+  :ensure t
+  :config
+  (require 'spaceline-config)
+  (setq powerline-default-separator (quote arrow))
+  (spaceline-spacemacs-theme))
+
+(use-package diminish
+  :ensure t
+  :init
+  (diminish 'hungry-delete-mode)
+  (diminish 'beacon-mode)
+  (diminish 'rainbow-mode)
+  (diminish 'which-key-mode))
+
+(use-package dmenu
+  :ensure t
+  :bind
+  ("C-x d" . 'dmenu))
+
+(global-display-line-numbers-mode 1)
+
+(use-package popup-kill-ring
+  :ensure t
+  :bind ("M-y" . popup-kill-ring))
+
+(use-package swiper
+  :ensure t
+  :bind ("C-s" . swiper))
+
+(use-package mark-multiple
+  :ensure t
+  :bind ("C-c q" . 'mark-next-like-this))
+
+(use-package expand-region
+  :ensure t
+  :bind ("C-q" . er/expand-region))
+
+(require 'company-auctex)
+(company-auctex-init)
+
+(setq TeX-command-force "LaTeX")
+
+(add-hook 'org-mode-hook '(lambda () (visual-line-mode 1)))
+
+(setq org-agenda-files (quote ("/home/angel/Documents/schedule.org")))
+
+(global-set-key (kbd "C-c a") 'org-agenda)
+
+;; Download Evil
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
+
+;; Enable Evil
+(require 'evil)
+(evil-mode 1)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+(load "key-chord")
+
+;;Exit insert mode by pressing j and then j quickly
+(setq key-chord-two-keys-delay 0.5)
+(key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+(key-chord-mode 1)
+
+;;add redo functionality for evil mode
+(use-package undo-tree
+  :ensure t
+  :after evil
+  :diminish
+  :config
+  (evil-set-undo-system 'undo-tree)
+  (global-undo-tree-mode 1))
+#+end_src
