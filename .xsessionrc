@@ -1,0 +1,7 @@
+/* /home/angel/suckless/dwmblocks/dwmblocks & */
+feh --bg-scale /home/angel/Pictures/space_wallpaper.jpg.jpg &
+dunst &
+/* pactl load-module module-echo-cancel */
+xinput disable 14 &
+/* picom & */
+redshift -l 38.24444:21.73444 &
