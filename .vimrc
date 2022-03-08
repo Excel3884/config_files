@@ -53,6 +53,8 @@ Plug 'scrooloose/syntastic'
 Plug 'vimwiki/vimwiki'
 Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
+Plug 'rhysd/vim-grammarous'
+Plug 'dpelle/vim-languagetool'
 
 call plug#end()
 
@@ -131,4 +133,4 @@ let Tex_FoldedSections=""
 let Tex_FoldedEnvironments=""
 let Tex_FoldedMisc=""
 
-
+hi Visual cterm=none ctermbg=darkgrey ctermfg=blue
