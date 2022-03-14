@@ -307,3 +307,9 @@ gaps outer 10
 #smart_gaps on
 #smart_borders on
 
+# make winows float
+for_window [title="^Write:*"] floating enable
+for_window[title="Help us protect your account"] floating enable
+
+# disable focus change due to mouse movement
+#focus_follows_mouse no
