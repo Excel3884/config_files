@@ -122,7 +122,9 @@ set incsearch
 set nohlsearch
 
 " cursor movement
-set so=5
+set sidescrolloff=999
+set scrolloff=999
+
 
 set nocompatible
 filetype plugin on
