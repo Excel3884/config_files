@@ -25,11 +25,15 @@ alias connectuop='sudo openvpn --config ~/Documents/vpn_config/UPatras.ovpn'
 # export QT_IM_MODULE=ibus
 
 # Pretty-print man(1) pages.
-export LESS_TERMCAP_mb=$'\E[1;31m'
-export LESS_TERMCAP_md=$'\E[1;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[1;33m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[1;32m'
+# export LESS_TERMCAP_mb=$'\E[1;31m'
+# export LESS_TERMCAP_md=$'\E[1;31m'
+# export LESS_TERMCAP_me=$'\E[0m'
+# export LESS_TERMCAP_ue=$'\E[0m'
+# export LESS_TERMCAP_so=$'\E[1;33m'
+# export LESS_TERMCAP_se=$'\E[0m'
+# export LESS_TERMCAP_us=$'\E[1;32m'
 
+# vi key bindings
+set -o vi
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
