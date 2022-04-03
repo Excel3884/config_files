@@ -83,10 +83,10 @@ bindsym Mod1+Shift+Up move up
 bindsym Mod1+Shift+Right move right
 
 # split in horizontal orientation
-bindsym Mod1+h split h
+# bindsym Mod1+h split h
 
 # split in vertical orientation
-bindsym Mod1+v split v
+# bindsym Mod1+v split v
 
 # enter fullscreen mode for the focused container
 bindsym Mod1+f fullscreen toggle
@@ -310,7 +310,10 @@ gaps outer 10
 # make winows float
 for_window [title="^Write:*"] floating enable
 for_window[title="Help us protect your account"] floating enable
+for_window[title="Sign in to Minecraft"] floating enable
+for_window[title="Welcome to Xbox"] floating enable
 for_window[title="MediaInfo"] floating enable
+for_window[title=".+.zip"] floating enable
 
 # disable focus change due to mouse movement
 #focus_follows_mouse no
