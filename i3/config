@@ -309,11 +309,13 @@ gaps outer 10
 
 # make winows float
 for_window [title="^Write:*"] floating enable
+for_window [title="About Mozilla Thunderbird"] floating enable
 for_window[title="Help us protect your account"] floating enable
 for_window[title="Sign in to Minecraft"] floating enable
 for_window[title="Welcome to Xbox"] floating enable
 for_window[title="MediaInfo"] floating enable
 for_window[title=".+.zip"] floating enable
+for_window[title="win0"] floating enable
 
 # disable focus change due to mouse movement
 #focus_follows_mouse no
