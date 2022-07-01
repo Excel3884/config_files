@@ -55,6 +55,7 @@ Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
 Plug 'rhysd/vim-grammarous'
 Plug 'dpelle/vim-languagetool'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -134,5 +135,7 @@ let g:Tex_DefaultTargetFormat='pdf'
 let Tex_FoldedSections=""
 let Tex_FoldedEnvironments=""
 let Tex_FoldedMisc=""
+nnoremap \lua :let g:vimtex_compiler_latexmk_engines['_']  = '-lualatex'<CR> :VimtexCompile<CR>
+
 
 hi Visual cterm=none ctermbg=darkgrey ctermfg=blue

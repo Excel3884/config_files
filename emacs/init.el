@@ -40,7 +40,7 @@
     (ol-bbdb ol-bibtex ol-docview ol-eww ol-gnus ol-info ol-irc ol-mhe ol-rmail org-tempo ol-w3m org-tempo)))
  '(package-selected-packages
    (quote
-    (gruvbox-theme calfw-org latex-preview-pane auctex company-auctex auto-dictionary auctex-latexmk pdf-tools expand-region mark-multiple swiper popup-kill-ring dmenu diminish spaceline company dashboard rainbow-delimiters switch-window rainbow-mode avy which-key use-package org-bullets monokai-pro-theme ido-vertical-mode helm-smex beacon)))
+    (centered-cursor-mode gruvbox-theme calfw-org latex-preview-pane auctex company-auctex auto-dictionary auctex-latexmk pdf-tools expand-region mark-multiple swiper popup-kill-ring dmenu diminish spaceline company dashboard rainbow-delimiters switch-window rainbow-mode avy which-key use-package org-bullets monokai-pro-theme ido-vertical-mode helm-smex beacon)))
  '(pdf-view-midnight-colors (quote ("#fdf4c1" . "#282828")))
  '(preview-gs-options
    (quote
