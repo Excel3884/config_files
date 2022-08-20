@@ -136,6 +136,11 @@ let Tex_FoldedSections=""
 let Tex_FoldedEnvironments=""
 let Tex_FoldedMisc=""
 nnoremap \lua :let g:vimtex_compiler_latexmk_engines['_']  = '-lualatex'<CR> :VimtexCompile<CR>
+let g:syntastic_quiet_messages = { "regex": [
+	        \ '\mpossible unwanted space at "{"',
+        \ 'SOME OTHER SYNTASTIC MESSAGE',
+		\ 'Command terminated with space.'
+		        \ ] }
 
 
 hi Visual cterm=none ctermbg=darkgrey ctermfg=blue
