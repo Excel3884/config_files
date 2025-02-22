@@ -22,7 +22,7 @@ font pango: Dejavu Sans 12
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock  --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -47,6 +47,9 @@ floating_modifier Mod1
 
 # start a terminal
 bindsym Mod1+Shift+Return exec st
+
+# start a gnome terminal
+bindsym Mod1+Shift+g exec gnome-terminal
 
 # kill focused window
 bindsym Mod1+Shift+c kill
@@ -189,43 +192,44 @@ bindsym Mod1+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
         # status_command i3status --config /etc/i3/i3status.conf
-   bar {
+   #bar {
 
-	status_command $HOME/.local/bin/bumblebee-status \
-		-m nic memory pasink pasource weather date time apt\
-		-p memory.format="{used}/{total}" nic.format="{intf} {state}" time.format="%I:%M %p" date.format="%a, %b %d %Y" nic.exclude='virbr0, lo, wlp2s0'\
-		-t iceberg-dark-powerline
-		position top
-		font pango: Hack Nerd Font 12
+	#status_command $HOME/.local/bin/bumblebee-status \
+		#-m nic memory pasink pasource weather date time battery \
+		#-p memory.format="{used}/{total}" nic.format="{intf} {state}" time.format="%I:%M %p" date.format="%a, %b %d %Y" nic.exclude='enx*, vboxnet*, enxb, enp0s3, virbr0, lo, wlp2s0'\
+		#-t iceberg-dark-powerline
+		#position top
+		#font pango: DejavuSansMono Nerd Font 12
 
-			      #gruvbox colorscheme
-#	colors {
-#			# bar background color
-#			background $bg
-#			# text color used for blocks that do not have a color specified.
-#			statusline $yellow
-#			# workspaces section
-#			#                    border  backgr. text
-#			focused_workspace    $aqua $aqua $darkgray
-#			inactive_workspace   $darkgray $darkgray $yellow
-#			active_workspace     $darkgray $darkgray $yellow
-#			urgent_workspace     $red $red $bg
-#		}
-#
-#				#nord colorscheme
-		colors {
-		    separator  #1f222d
-		    background #1f222d
-		    statusline #81a1c1
+			      ##gruvbox colorscheme
+##	colors {
+##			# bar background color
+##			background $bg
+##			# text color used for blocks that do not have a color specified.
+##			statusline $yellow
+##			# workspaces section
+##			#                    border  backgr. text
+##			focused_workspace    $aqua $aqua $darkgray
+##			inactive_workspace   $darkgray $darkgray $yellow
+##			active_workspace     $darkgray $darkgray $yellow
+##			urgent_workspace     $red $red $bg
+##		}
+##
+##				#nord colorscheme
+		#colors {
+		    #separator  #1f222d
+		    #background #1f222d
+		    #statusline #81a1c1
 
-		    #border  background text
-		    focused_workspace  #1f222d #1f222d    #81a1c1
-		    active_workspace   #1f222d #252936    #5e81ac
-		    inactive_workspace #1f222d #1f222d    #4c566a
-		    urgent_workspace   #1f222d #1f222d    #ee829f
-		    binding_mode       #1f222d #81a1c1    #2e3440
-		    }
-	}
+		    ##border  background text
+		    #focused_workspace  #1f222d #1f222d    #81a1c1
+		    #active_workspace   #1f222d #252936    #5e81ac
+		    #inactive_workspace #1f222d #1f222d    #4c566a
+		    #urgent_workspace   #1f222d #1f222d    #ee829f
+		    #binding_mode       #1f222d #81a1c1    #2e3440
+		    #}
+	#}
+
 
 #				gruvbox colorscheme
 ##set primary gruvbox colorscheme colors
@@ -277,8 +281,12 @@ bindsym Mod1+Shift+t exec --no-startup-id thunderbird
 bindsym Mod1+n workspace next
 bindsym Mod1+b workspace prev
 
+# xrandr
+bindsym Mod1+Shift+a exec xrandr --output eDP-1 --off
+bindsym Mod1+Shift+s exec xrandr --output eDP-1 --auto
+
 # shutdown, reboot, lock screen
-set $Locker i3lock && sleep 1
+set $Locker i3lock -i /home/angel/Pictures/bing/bing-05-11-2024.png && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -292,13 +300,13 @@ mode "$mode_system" {
     # back to normal: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
-             }
+}
 
     bindsym Mod1+d mode "$mode_system"
 
 
 # start polybar
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id /home/angel/.config/polybar/launch.sh
 
 #enabling gaps
 for_window [class="^.*"] border pixel 2
@@ -310,14 +318,20 @@ gaps outer 10
 # make winows float
 for_window [title="^Write:*"] floating enable
 for_window [title="About Mozilla Thunderbird"] floating enable
-for_window[title="Help us protect your account"] floating enable
-for_window[title="Sign in to Minecraft"] floating enable
-for_window[title="Welcome to Xbox"] floating enable
-for_window[title="MediaInfo"] floating enable
-for_window[title=".+.zip"] floating enable
-for_window[title="win0"] floating enable
+for_window [title="Help us protect your account"] floating enable
+for_window [title="Sign in to Minecraft"] floating enable
+for_window [title="Welcome to Xbox"] floating enable
+for_window [title="MediaInfo"] floating enable
+for_window [title=".+.zip"] floating enable
+for_window [title="win0"] floating enable
 
 # disable focus change due to mouse movement
-#focus_follows_mouse no
+# focus_follows_mouse no
 
 #jump between workspaces
+
+exec_always --no-startup-id setxkbmap -layout us,gr
+exec_always --no-startup-id setxkbmap -option 'grp:win_space_toggle'
+
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-

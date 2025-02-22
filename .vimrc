@@ -1,5 +1,5 @@
 set clipboard=unnamed
-set guifont=Fira\ Code\ 18
+set guifont=Fira\ Code\ 12
 set encoding=utf-8
 
 
@@ -35,7 +35,7 @@ set guicursor=i:block
 " numbers
 set nu
 set ruler
-set relativenumber
+" set relativenumber
 
 syntax on
 " plugins
@@ -56,6 +56,8 @@ Plug 'morhetz/gruvbox'
 Plug 'rhysd/vim-grammarous'
 Plug 'dpelle/vim-languagetool'
 Plug 'mattn/emmet-vim'
+Plug 'rightson/vim-p4-syntax'
+Plug 'rr-/vim-hexdec'
 
 call plug#end()
 
