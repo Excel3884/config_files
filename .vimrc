@@ -7,9 +7,6 @@ set encoding=utf-8
 let mapleader = ","
 nmap <leader>so :source ~/.vimrc<CR>
 
-" Mapping to next tab
-nmap <leader>n :tabn<CR>
-
 " NERDTREE
 nmap <leader>ne :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
@@ -22,7 +19,7 @@ nmap <leader>sp :vsplit<CR>
 " nnoremap <C-b> :!python3 %<CR>
 
 " Build c file
-nnoremap <C-b> :!gcc % -lm <CR>
+" nnoremap <C-b> :!gcc % -lm <CR>
 
 " block cursor for insert mode
 set guicursor=i:block
@@ -58,6 +55,9 @@ Plug 'dpelle/vim-languagetool'
 Plug 'mattn/emmet-vim'
 Plug 'rightson/vim-p4-syntax'
 Plug 'rr-/vim-hexdec'
+" Plug 'roxma/nvim-yarp', v:version >= 800 && !has('nvim') ? {} : { 'on': [],'for': [] }
+" Plug 'roxma/vim-hug-neovim-rpc', v:version >= 800 && !has('nvim') ? {} : {'on': [], 'for': [] }
+" Plug 'raghur/vim-ghost'
 
 call plug#end()
 
@@ -104,8 +104,10 @@ set shiftwidth=4
 " enable autocompletion ctrl+n to activate:
 set wildmode=longest,list,full
 
-" new tab
+" tabs
 nnoremap <silent> <C-t> :tabnew<CR>
+nnoremap <C-n> :tabn<CR>
+nnoremap <C-b> :tabp<CR>
 
 " delete trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
