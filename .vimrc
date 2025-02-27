@@ -105,9 +105,10 @@ set shiftwidth=4
 set wildmode=longest,list,full
 
 " tabs
-nnoremap <silent> <C-t> :tabnew<CR>
-nnoremap <C-n> :tabn<CR>
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-m> :tabn<CR>
 nnoremap <C-b> :tabp<CR>
+nnoremap <C-x> :tabc<CR>
 
 " delete trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
