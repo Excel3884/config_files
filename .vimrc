@@ -149,3 +149,11 @@ let g:syntastic_quiet_messages = { "regex": [
 
 
 hi Visual cterm=none ctermbg=darkgrey ctermfg=blue
+" highlight Normal ctermbg=none guibg=none
+" highlight NonText ctermbg=none guibg=none
+" highlight NormalNC ctermbg=none guibg=none
+
+" copy/paste text
+" vnoremap <C-c> "+y
+vnoremap <C-c> "*y :let @+=@*<CR>
+map <C-v> "+P
