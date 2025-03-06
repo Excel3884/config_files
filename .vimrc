@@ -1,5 +1,6 @@
 set clipboard=unnamed
 set guifont=Fira\ Code\ 12
+set guifont=JetBrainsMonoNL\ Nerd\ Font\ Mono\ 12
 set encoding=utf-8
 
 
@@ -59,6 +60,8 @@ Plug 'garbas/vim-snipmate' " needed for supertab
 Plug 'marcweber/vim-addon-mw-utils' " needed for supertab
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'ryanoasis/vim-devicons'
+
 
 call plug#end()
 
@@ -163,3 +166,6 @@ map <C-v> "+P
 
 " setup for fzf
 nnoremap <C-f> :Files<CR>
+
+" fix issue with devicons & terminal
+set t_RV=
