@@ -55,9 +55,10 @@ Plug 'dpelle/vim-languagetool'
 Plug 'mattn/emmet-vim'
 Plug 'rightson/vim-p4-syntax'
 Plug 'rr-/vim-hexdec'
-" Plug 'roxma/nvim-yarp', v:version >= 800 && !has('nvim') ? {} : { 'on': [],'for': [] }
-" Plug 'roxma/vim-hug-neovim-rpc', v:version >= 800 && !has('nvim') ? {} : {'on': [], 'for': [] }
-" Plug 'raghur/vim-ghost'
+Plug 'garbas/vim-snipmate' " needed for supertab
+Plug 'marcweber/vim-addon-mw-utils' " needed for supertab
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -149,6 +150,8 @@ let g:syntastic_quiet_messages = { "regex": [
 
 
 hi Visual cterm=none ctermbg=darkgrey ctermfg=blue
+let &t_ut=''
+" hi Normal guibg=NONE ctermbg=NONE
 " highlight Normal ctermbg=none guibg=none
 " highlight NonText ctermbg=none guibg=none
 " highlight NormalNC ctermbg=none guibg=none
@@ -157,3 +160,6 @@ hi Visual cterm=none ctermbg=darkgrey ctermfg=blue
 " vnoremap <C-c> "+y
 vnoremap <C-c> "*y :let @+=@*<CR>
 map <C-v> "+P
+
+" setup for fzf
+nnoremap <C-f> :Files<CR>
