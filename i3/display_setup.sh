@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Detect connected displays
-EXTERNAL_DISPLAY_DOCK=$(xrandr | grep 'DP-1 connected' | awk '{print $1}')  # Assuming dock uses DP-1
+EXTERNAL_DISPLAY_DOCK=$(xrandr | grep 'DP-3-1 connected' | awk '{print $1}')  # Assuming dock uses DP-1
 EXTERNAL_DISPLAY_HDMI=$(xrandr | grep 'HDMI-1 connected' | awk '{print $1}')
 LAPTOP_DISPLAY=$(xrandr | grep 'eDP-1 connected' | awk '{print $1}')
 
