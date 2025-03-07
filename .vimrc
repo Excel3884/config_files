@@ -1,5 +1,4 @@
 set clipboard=unnamed
-set guifont=Fira\ Code\ 12
 set guifont=JetBrainsMonoNL\ Nerd\ Font\ Mono\ 12
 set encoding=utf-8
 
@@ -61,6 +60,7 @@ Plug 'marcweber/vim-addon-mw-utils' " needed for supertab
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/goyo.vim'
 
 
 call plug#end()
