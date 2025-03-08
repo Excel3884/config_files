@@ -20,3 +20,16 @@ export PATH="$HOME/.cargo/bin:$PATH"
 PS1='\[\e[1;31m\][\[\e[1;32m\]\u@\h \[\e[1;34m\]\W \[\e[1;31m\]]\[\e[1;36m\]\$ \[\e[0m\]'
 
 export MANPAGER="vim -M +MANPAGER -"
+
+# setup environment variable for vivado
+export XILINXD_LICENSE_FILE=27017@xilinx.licenties.uva.nl
+
+# export TERM=xterm-256color
+
+PATH="/home/angel/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/angel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/angel/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/angel/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/angel/perl5"; export PERL_MM_OPT;
+
+alias weather='curl wttr.in'
