@@ -338,8 +338,9 @@ for_window [title="win0"] floating enable
 
 #jump between workspaces
 
-exec_always --no-startup-id setxkbmap -layout us,gr
-exec_always --no-startup-id setxkbmap -option 'grp:win_space_toggle'
+exec --no-startup-id setxkbmap -layout us,gr -option 'grp:win_space_toggle'
+
+
 
 bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 5%-
@@ -348,8 +349,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 5%-
 exec --no-startup-id sh -c 'pgrep -u "$USER" ssh-agent > /dev/null || (eval "$(ssh-agent -s)" > ~/.ssh-agent-info && echo "export $(grep SSH_AUTH_SOCK ~/.ssh-agent-info)" >> ~/.profile)'
 
 # Load SSH agent environment variables for new shells
-exec --no-startup-id sh -c '[ -f ~/.ssh-agent-info ] && eval "$(cat ~/.ssh-agent-info)"'
+exec --no-startup-id sh -c '[ -f ~/.ssh-agent-info ] && eval "$(cat ~/.ssh-agent-info)"' &
 
 # Add all private SSH keys to the agent
-exec --no-startup-id sh -c 'sleep 1 && for key in ~/.ssh/id_*; do [ -f "$key" ] && [[ "$key" != *.pub ]] && ssh-add "$key"; done'
+exec --no-startup-id bash -c 'sleep 1 && for key in ~/.ssh/*; do [ -f "$key" ] && [[ "$key" != *.pub ]] && [[ "$key" != known_hosts* ]] && ssh-add "$key"; done'
 
