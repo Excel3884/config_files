@@ -1,8 +1,8 @@
 /* /home/angel/suckless/dwmblocks/dwmblocks & */
-/* feh --bg-scale /home/angel/Pictures/nature_wallpaper.jpg & */
+feh --bg-scale /home/angel/Pictures/nature_wallpaper.jpg &
 dunst &
-python3 /home/angel/Documents/Daily-bing-walls/daily.py &
+/* python3 /home/angel/Documents/Daily-bing-walls/daily.py & */
 /* pactl load-module module-echo-cancel */
 /* xinput disable 19 & */
 picom &
-/* redshift -l 38.24444:21.73444 & */
+redshift &
