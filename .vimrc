@@ -112,7 +112,6 @@ set wildmode=longest,list,full
 nnoremap <C-t> :tabnew<CR>
 nnoremap <C-m> :tabn<CR>
 nnoremap <C-b> :tabp<CR>
-nnoremap <C-x> :tabc<CR>
 
 " delete trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
@@ -152,7 +151,7 @@ let g:syntastic_quiet_messages = { "regex": [
 		        \ ] }
 
 
-hi Visual cterm=none ctermbg=darkgrey ctermfg=blue
+" hi Visual cterm=none ctermbg=darkgrey ctermfg=blue
 let &t_ut=''
 " hi Normal guibg=NONE ctermbg=NONE
 " highlight Normal ctermbg=none guibg=none
@@ -167,5 +166,5 @@ map <C-v> "+P
 " setup for fzf
 nnoremap <C-f> :Files<CR>
 
-" fix issue with devicons & terminal
-set t_RV=
+" fix issue with devicons & terminal (kitty)
+" set t_RV=
