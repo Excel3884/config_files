@@ -11,7 +11,7 @@
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Dejavu Sans 12
+font pango: JetBrainsMonoNL Nerd 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -46,7 +46,7 @@ set $right k
 floating_modifier Mod1
 
 # start a terminal
-bindsym Mod1+Shift+Return exec kitty
+bindsym Mod1+Shift+Return exec st
 
 # start a gnome terminal
 bindsym Mod1+Shift+g exec gnome-terminal
@@ -95,7 +95,7 @@ bindsym Mod1+Shift+Right move right
 bindsym Mod1+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym Mod1+s layout stacking
+# bindsym Mod1+s layout stacking
 bindsym Mod1+w layout tabbed
 bindsym Mod1+e layout toggle split
 
@@ -278,6 +278,7 @@ exec i3-config-wizard
 # Custom key bindings
 bindsym Mod1+Shift+b exec --no-startup-id librewolf
 bindsym Mod1+Shift+t exec --no-startup-id thunderbird
+#jump between workspaces
 bindsym Mod1+n workspace next
 bindsym Mod1+b workspace prev
 
@@ -294,7 +295,10 @@ bindsym Mod1+Shift+s exec xrandr --output eDP-1 --auto
 
 
 # shutdown, reboot, lock screen
-set $Locker i3lock -i /home/angel/Pictures/bing/bing-05-11-2024.png && sleep 1
+# Washington wallpaper
+# set $Locker i3lock -i /home/angel/Pictures/bing/bing-05-11-2024.png && sleep 1
+# Nature wallpaper
+set $Locker i3lock -i /home/angel/Pictures/nature_wallpaper.png && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -310,7 +314,11 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-    bindsym Mod1+d mode "$mode_system"
+bindsym Mod1+d mode "$mode_system"
+
+
+
+
 
 
 # start polybar
@@ -336,14 +344,13 @@ for_window [title="win0"] floating enable
 # disable focus change due to mouse movement
 # focus_follows_mouse no
 
-#jump between workspaces
 
-exec --no-startup-id setxkbmap -layout us,gr -option 'grp:win_space_toggle'
-
+exec_always --no-startup-id setxkbmap -layout us,gr -option "grp:win_space_toggle" -model pc105
 
 
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 5%-
+
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 # Start ssh-agent if not running and store environment variables
 exec --no-startup-id sh -c 'pgrep -u "$USER" ssh-agent > /dev/null || (eval "$(ssh-agent -s)" > ~/.ssh-agent-info && echo "export $(grep SSH_AUTH_SOCK ~/.ssh-agent-info)" >> ~/.profile)'
@@ -353,4 +360,6 @@ exec --no-startup-id sh -c '[ -f ~/.ssh-agent-info ] && eval "$(cat ~/.ssh-agent
 
 # Add all private SSH keys to the agent
 exec --no-startup-id bash -c 'sleep 1 && for key in ~/.ssh/*; do [ -f "$key" ] && [[ "$key" != *.pub ]] && [[ "$key" != known_hosts* ]] && ssh-add "$key"; done'
+
+for_window [class="xtightvncviewer"] floating enable
 
