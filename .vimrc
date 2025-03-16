@@ -2,7 +2,6 @@ set clipboard=unnamed
 set guifont=JetBrainsMonoNL\ Nerd\ Font\ Mono\ 12
 set encoding=utf-8
 
-
 " Mapping to reload configuration
 let mapleader = ","
 nmap <leader>so :source ~/.vimrc<CR>
@@ -61,7 +60,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
-
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
@@ -110,8 +109,8 @@ set wildmode=longest,list,full
 
 " tabs
 nnoremap <C-t> :tabnew<CR>
-nnoremap <C-m> :tabn<CR>
-nnoremap <C-b> :tabp<CR>
+nnoremap <C-k> :tabn<CR>
+nnoremap <C-j> :tabp<CR>
 
 " delete trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
