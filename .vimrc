@@ -32,7 +32,7 @@ set guicursor=i:block
 " numbers
 set nu
 set ruler
-" set relativenumber
+set relativenumber
 
 syntax on
 " plugins
@@ -105,7 +105,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-" enable autocompletion ctrl+n to activate:
+" enable autocompletion:
 set wildmode=longest,list,full
 
 " tabs
@@ -166,5 +166,10 @@ map <C-v> "+P
 " setup for fzf
 nnoremap <C-f> :Files<CR>
 
+" setup for Goyo
+nnoremap <leader>r :Goyo<CR>
+
+" spell check
+map <leader>o :setlocal spell! spelllang=en_us<CR>
 " fix issue with devicons & terminal (kitty)
 " set t_RV=
