@@ -167,8 +167,16 @@ nnoremap <C-f> :Files<CR>
 
 " setup for Goyo
 nnoremap <leader>r :Goyo<CR>
+" Width
+let g:goyo_width = 120
 
 " spell check
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 " fix issue with devicons & terminal (kitty)
 " set t_RV=
+
+" vimwiki configuration
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', "syntax": "markdown", "ext": ".md"}]
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
