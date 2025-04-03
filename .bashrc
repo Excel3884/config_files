@@ -22,14 +22,28 @@ PS1='\[\e[1;31m\][\[\e[1;32m\]\u@\h \[\e[1;34m\]\W \[\e[1;31m\]]\[\e[1;36m\]\$ \
 export MANPAGER="vim -M +MANPAGER -"
 
 # setup environment variable for vivado
-export XILINXD_LICENSE_FILE=27017@xilinx.licenties.uva.nl
+# export XILINXD_LICENSE_FILE=27017@xilinx.licenties.uva.nl
 
-# export TERM=xterm-256color
-
-PATH="/home/angel/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/angel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/angel/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/angel/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/angel/perl5"; export PERL_MM_OPT;
-
+export TERM=xterm-256color
 alias weather='curl wttr.in'
+
+# convert jpg to png
+alias convert_png='find . -name "*.jpg" -exec mogrify -format png {} \;'
+
+# youtube-dl alias
+mp3 () {
+    yt-dlp --ignore-errors -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s' "$1"
+}
+
+mp3p () {
+    yt-dlp --ignore-errors --sleep-interval 30 -i -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "$1"
+}
+
+dlv () {
+    yt-dlp --ignore-errors -o '%(title)s.%(ext)s' "$1"
+}
+
+dlp () {
+    yt-dlp --yes-playlist --ignore-errors --sleep-interval 30 -o '%(playlist)s/%(title)s.%(ext)s' "$1"
+}
+
