@@ -49,8 +49,9 @@ Plug 'scrooloose/syntastic'
 Plug 'vimwiki/vimwiki'
 Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
-Plug 'rhysd/vim-grammarous'
-Plug 'dpelle/vim-languagetool'
+" Plug 'rhysd/vim-grammarous'
+" Plug 'dpelle/vim-languagetool'
+Plug 'preservim/vim-wordy'
 Plug 'mattn/emmet-vim'
 Plug 'rightson/vim-p4-syntax'
 Plug 'rr-/vim-hexdec'
@@ -61,6 +62,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'mattn/calendar.vim'
 
 call plug#end()
 
@@ -167,11 +169,17 @@ nnoremap <C-f> :Files<CR>
 
 " setup for Goyo
 nnoremap <leader>r :Goyo<CR>
+
 " Width
 let g:goyo_width = 120
 
 " spell check
-map <leader>o :setlocal spell! spelllang=en_us<CR>
+map <F5> :setlocal spell! spelllang=en_us<CR>
+hi clear SpellBad
+hi SpellBad cterm=underline
+" Set style for gVim
+hi SpellBad gui=undercurl
+
 " fix issue with devicons & terminal (kitty)
 " set t_RV=
 
@@ -180,3 +188,4 @@ let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', "syntax": "markdown", "ex
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
+" let g:vimwiki_listsyms: '✗○◐●✓'
