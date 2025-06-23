@@ -51,7 +51,7 @@ Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
 " Plug 'rhysd/vim-grammarous'
 " Plug 'dpelle/vim-languagetool'
-Plug 'preservim/vim-wordy'
+Plug 'preservim/vim-wordy' " using this instead of grammarous/language tool
 Plug 'mattn/emmet-vim'
 Plug 'rightson/vim-p4-syntax'
 Plug 'rr-/vim-hexdec'
@@ -158,6 +158,7 @@ let &t_ut=''
 " highlight Normal ctermbg=none guibg=none
 " highlight NonText ctermbg=none guibg=none
 " highlight NormalNC ctermbg=none guibg=none
+" hi statusline guibg=NONE
 
 " copy/paste text
 " vnoremap <C-c> "+y
@@ -167,11 +168,10 @@ map <C-v> "+P
 " setup for fzf
 nnoremap <C-f> :Files<CR>
 
-" setup for Goyo
+" shortcut for Goyo
 nnoremap <leader>r :Goyo<CR>
-
-" Width
-let g:goyo_width = 120
+" width for Goyo
+" let g:goyo_width = 120
 
 " spell check
 map <F5> :setlocal spell! spelllang=en_us<CR>
