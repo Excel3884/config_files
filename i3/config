@@ -293,7 +293,9 @@ workspace 5 output eDP-1
 workspace 6 output HDMI-1
 # bindsym Mod1+Shift+a exec --no-startup-id ~/.config/i3/display_setup.sh
 # bindsym Mod1+Shift+a exec xrandr --output eDP-1 --off
-bindsym Mod1+Shift+s exec xrandr --output eDP-1 --auto
+bindsym Mod1+Shift+a exec xrandr --output eDP-1 --auto
+bindsym Mod1+Shift+s exec --no-startup-id /home/angel/.screenlayout/home_monitor_layout.sh &
+bindsym Mod1+Shift+d exec --no-startup-id /home/angel/.screenlayout/work_monitor_layout.sh &
 
 
 # shutdown, reboot, lock screen
