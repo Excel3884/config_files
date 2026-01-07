@@ -46,7 +46,8 @@ set $right k
 floating_modifier Mod1
 
 # start a terminal
-bindsym Mod1+Shift+Return exec st
+# bindsym Mod1+Shift+Return exec st
+bindsym Mod1+Shift+Return exec alacritty
 
 # start a gnome terminal
 bindsym Mod1+Shift+g exec gnome-terminal
@@ -59,7 +60,7 @@ bindsym Mod1+p exec rofi -show drun
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop
+bindsym Mod1+o exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym Mod1+$left focus left
@@ -277,6 +278,7 @@ exec i3-config-wizard
 
 # Custom key bindings
 bindsym Mod1+Shift+b exec --no-startup-id librewolf
+bindsym Mod1+Shift+u exec --no-startup-id qutebrowser
 bindsym Mod1+Shift+t exec --no-startup-id thunderbird
 #jump between workspaces
 bindsym Mod1+n workspace next
@@ -289,16 +291,13 @@ workspace 3 output eDP-1
 workspace 4 output eDP-1
 workspace 5 output eDP-1
 workspace 6 output HDMI-1
-bindsym Mod1+Shift+a exec --no-startup-id ~/.config/i3/display_setup.sh
+# bindsym Mod1+Shift+a exec --no-startup-id ~/.config/i3/display_setup.sh
 # bindsym Mod1+Shift+a exec xrandr --output eDP-1 --off
 bindsym Mod1+Shift+s exec xrandr --output eDP-1 --auto
 
 
 # shutdown, reboot, lock screen
-# Washington wallpaper
-# set $Locker i3lock -i /home/angel/Pictures/bing/bing-05-11-2024.png && sleep 1
-# Nature wallpaper
-set $Locker i3lock -i /home/angel/Pictures/nature_wallpaper.png && sleep 1
+set $Locker i3lock -i /home/angel/Pictures/wallpapers/village_tower_houses.png && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -328,8 +327,8 @@ exec_always --no-startup-id /home/angel/.config/polybar/launch.sh
 for_window [class="^.*"] border pixel 2
 gaps inner 5
 gaps outer 5
-#smart_gaps on
-#smart_borders on
+# smart_gaps on
+# smart_borders on
 
 # make winows float
 for_window [title="^Write:*"] floating enable
@@ -353,13 +352,14 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 # Start ssh-agent if not running and store environment variables
-exec --no-startup-id sh -c 'pgrep -u "$USER" ssh-agent > /dev/null || (eval "$(ssh-agent -s)" > ~/.ssh-agent-info && echo "export $(grep SSH_AUTH_SOCK ~/.ssh-agent-info)" >> ~/.profile)'
+# exec --no-startup-id sh -c 'pgrep -u "$USER" ssh-agent > /dev/null || (eval "$(ssh-agent -s)" > ~/.ssh-agent-info && echo "export $(grep SSH_AUTH_SOCK ~/.ssh-agent-info)" >> ~/.profile)'
 
 # Load SSH agent environment variables for new shells
-exec --no-startup-id sh -c '[ -f ~/.ssh-agent-info ] && eval "$(cat ~/.ssh-agent-info)"' &
+# exec --no-startup-id sh -c '[ -f ~/.ssh-agent-info ] && eval "$(cat ~/.ssh-agent-info)"' &
 
 # Add all private SSH keys to the agent
-exec --no-startup-id bash -c 'sleep 1 && for key in ~/.ssh/*; do [ -f "$key" ] && [[ "$key" != *.pub ]] && [[ "$key" != known_hosts* ]] && ssh-add "$key"; done'
+# exec --no-startup-id bash -c 'sleep 1 && for key in ~/.ssh/*; do [ -f "$key" ] && [[ "$key" != *.pub ]] && [[ "$key" != known_hosts* ]] && ssh-add "$key"; done'
 
 for_window [class="xtightvncviewer"] floating enable
 
+exec --no-startup-id /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
