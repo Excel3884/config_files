@@ -63,6 +63,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'mattn/calendar.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'joshdick/onedark.vim'
+" Plug 'instant-markdown/vim-instant-markdown'
 
 call plug#end()
 
@@ -82,7 +85,7 @@ let g:syntastic_enable_highlighting = 0
 autocmd FileType python setlocal completeopt-=preview
 
 "theme
-colorscheme gruvbox
+colorscheme onedark
 set background=dark
 
 "disable arrow keys (normal mode)

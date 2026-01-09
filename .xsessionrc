@@ -1,8 +1,5 @@
-/* /home/angel/suckless/dwmblocks/dwmblocks & */
-feh --bg-scale /home/angel/Pictures/nature_wallpaper.jpg &
+feh --bg-scale /home/angel/Pictures/wallpapers/village_tower_houses.png &
 dunst &
 /* python3 /home/angel/Documents/Daily-bing-walls/daily.py & */
-/* pactl load-module module-echo-cancel */
-/* xinput disable 19 & */
-picom &
 redshift &
+setxkbmap -layout us,gr -option 'grp:win_space_toggle' -model pc105 &
