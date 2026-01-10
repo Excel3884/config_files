@@ -78,14 +78,15 @@
 ;; CUSTOM STUFF
 
 ;; Set custom font
-(setq doom-font (font-spec :family "JetBrains Mono Nerd Font" :size 18))
+(setq doom-font (font-spec :family "JetBrains Mono Nerd Font" :size 20))
 
 ; Source - https://stackoverflow.com/a
 ; Posted by E. Sambo
 ; Retrieved 2026-01-08, License - CC BY-SA 3.0
-
 ;;Exit insert mode by pressing j and then j quickly
 (setq key-chord-two-keys-delay 0.5)
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-mode 1)
 
+
+(setq fancy-splash-image (concat doom-user-dir "doomEmacsRouge_scaled.svg"))
