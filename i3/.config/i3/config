@@ -354,15 +354,6 @@ exec_always --no-startup-id setxkbmap -layout us,gr -option "grp:win_space_toggl
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
-# Start ssh-agent if not running and store environment variables
-# exec --no-startup-id sh -c 'pgrep -u "$USER" ssh-agent > /dev/null || (eval "$(ssh-agent -s)" > ~/.ssh-agent-info && echo "export $(grep SSH_AUTH_SOCK ~/.ssh-agent-info)" >> ~/.profile)'
-
-# Load SSH agent environment variables for new shells
-# exec --no-startup-id sh -c '[ -f ~/.ssh-agent-info ] && eval "$(cat ~/.ssh-agent-info)"' &
-
-# Add all private SSH keys to the agent
-# exec --no-startup-id bash -c 'sleep 1 && for key in ~/.ssh/*; do [ -f "$key" ] && [[ "$key" != *.pub ]] && [[ "$key" != known_hosts* ]] && ssh-add "$key"; done'
-
 for_window [class="xtightvncviewer"] floating enable
 
 # start polkit for authentication in i3
@@ -370,3 +361,4 @@ exec --no-startup-id /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication
 
 # start emacs daemon
 exec --no-startup-id /usr/bin/emacs --daemon &
+
