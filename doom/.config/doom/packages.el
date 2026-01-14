@@ -56,4 +56,6 @@
 (package! tldr)
 (package! key-chord)
 (package! dired-hacks)
+(package! org-modern)
+;; (package! org-bullets)
 ;;(package! centered-cursor-mode)

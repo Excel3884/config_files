@@ -88,5 +88,21 @@
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-mode 1)
 
-
+;; Change splash screen image
 (setq fancy-splash-image (concat doom-user-dir "doomEmacsRouge_scaled.svg"))
+
+
+;; (use-package! org-modern
+;; :after org
+;; :init
+;; (setq org-modern-list '((?- . "⁖ ")
+;;                         (?+ . "◉ ")
+;;                         (?* . "○ "))
+;;         ;; optional: pretty stars for headings
+;;         ;; org-modern-star '("◉" "○" "◈" "◇" "✶"))
+;;         org-modern-star '("◉" "○" "✸" "❖" "✮" "✱"))
+;; :hook ((org-mode . org-modern-mode)
+;;         (org-agenda-finalize . org-modern-agenda)))
+
+
+;; (setq org-bullets-bullet-list '("◉" "○" "✸" "❖" "✮" "✱"))
