@@ -91,18 +91,16 @@
 ;; Change splash screen image
 (setq fancy-splash-image (concat doom-user-dir "doomEmacsRouge_scaled.svg"))
 
-
-;; (use-package! org-modern
-;; :after org
-;; :init
-;; (setq org-modern-list '((?- . "⁖ ")
-;;                         (?+ . "◉ ")
-;;                         (?* . "○ "))
-;;         ;; optional: pretty stars for headings
-;;         ;; org-modern-star '("◉" "○" "◈" "◇" "✶"))
-;;         org-modern-star '("◉" "○" "✸" "❖" "✮" "✱"))
-;; :hook ((org-mode . org-modern-mode)
-;;         (org-agenda-finalize . org-modern-agenda)))
-
-
 ;; (setq org-bullets-bullet-list '("◉" "○" "✸" "❖" "✮" "✱"))
+
+(setq deft-directory "~/Documents/org/"
+      deft-extensions '("org" "txt")
+      deft-recursive t)
+
+(setq org-directory "~/Documents/org/")
+
+(setq org-journal-date-prefix "#+TITLE: "
+      org-journal-time-prefix ""
+      org-journal-time-format ""
+      org-journal-date-format "%a, %Y-%m-%d"
+      org-journal-file-format "%Y-%m-%d.org")
