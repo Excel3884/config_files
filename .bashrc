@@ -47,3 +47,6 @@ dlp () {
     yt-dlp --yes-playlist --ignore-errors --sleep-interval 30 -o '%(playlist)s/%(title)s.%(ext)s' "$1"
 }
 
+export PATH="$HOME/.config/emacs/bin:$PATH"
+
+eval $(keychain --eval --quiet gh_key id_rsa 2>/dev/null)
