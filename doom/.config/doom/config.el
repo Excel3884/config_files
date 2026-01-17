@@ -104,3 +104,5 @@
       org-journal-time-format ""
       org-journal-date-format "%a, %Y-%m-%d"
       org-journal-file-format "%Y-%m-%d.org")
+
+(setq org-roam-directory "~/Documents/roam")
