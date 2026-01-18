@@ -353,4 +353,3 @@ exec --no-startup-id /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication
 
 # start emacs daemon
 exec --no-startup-id /usr/bin/emacs --daemon &
-
