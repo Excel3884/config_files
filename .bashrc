@@ -49,4 +49,4 @@ dlp () {
 
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
-eval $(keychain --eval --quiet gh_key id_rsa 2>/dev/null)
+eval $(keychain --eval --quiet mc-b3 mc5 gh_key 2>/dev/null)
