@@ -278,8 +278,8 @@ exec i3-config-wizard
 
 # Custom key bindings
 bindsym Mod1+Shift+b exec --no-startup-id librewolf
-bindsym Mod1+Shift+u exec --no-startup-id qutebrowser
-bindsym Mod1+Shift+t exec --no-startup-id thunderbird
+# bindsym Mod1+Shift+u exec --no-startup-id qutebrowser
+# bindsym Mod1+Shift+t exec --no-startup-id thunderbird
 bindsym Mod1+Shift+e exec --no-startup-id emacsclient -c -a vim
 #jump between workspaces
 bindsym Mod1+n workspace next
