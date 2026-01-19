@@ -59,3 +59,5 @@
 ;; (package! org-modern)
 ;; (package! org-bullets)
 ;;(package! centered-cursor-mode)
+(package! tree-sitter)
+(package! p4-ts-mode)

@@ -106,3 +106,5 @@
       org-journal-file-format "%Y-%m-%d.org")
 
 (setq org-roam-directory "~/Documents/roam")
+
+(use-package! p4-ts-mode)
