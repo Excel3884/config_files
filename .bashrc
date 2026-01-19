@@ -9,7 +9,6 @@ alias kp='keepassxc-cli'
 # alias for termbin
 alias tb='nc termbin.com 9999'
 
-alias p4='cd ~/Documents/p4_exercises'
 alias ra='ranger'
 # Make Sure Your Shell Sources the SSH Agent Info
 export SSH_AUTH_SOCK=$(find /tmp -type s -name agent.\* 2>/dev/null | head -n 1)
