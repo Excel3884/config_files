@@ -90,6 +90,7 @@
 
 ;; Change splash screen image
 (setq fancy-splash-image (concat doom-user-dir "doomEmacsRouge_scaled.svg"))
+(setq +doom-dashboard-banner-padding '(4 . 4) )
 
 ;; (setq org-bullets-bullet-list '("◉" "○" "✸" "❖" "✮" "✱"))
 
@@ -108,3 +109,5 @@
 (setq org-roam-directory "~/Documents/roam")
 
 (use-package! p4-ts-mode)
+
+(setq org-agenda-files '("~/Documents/org/"))
