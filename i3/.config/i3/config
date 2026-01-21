@@ -319,7 +319,7 @@ mode "$mode_system" {
 bindsym Mod1+d mode "$mode_system"
 
 # start polybar
-exec_always --no-startup-id /home/angel/.config/polybar/launch.sh
+exec_always --no-startup-id /home/angel/.config/polybar/launch.sh &
 
 #enabling gaps
 for_window [class="^.*"] border pixel 2
