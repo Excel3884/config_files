@@ -91,7 +91,7 @@
 
 ;; Change splash screen image
 (setq fancy-splash-image (concat doom-user-dir "doomEmacsRouge_scaled.svg"))
-(setq +doom-dashboard-banner-padding '(4 . 4) )
+(setq +doom-dashboard-banner-padding '(2 . 2) )
 
 ;; Org settings
 (setq deft-directory "~/Documents/org/"
