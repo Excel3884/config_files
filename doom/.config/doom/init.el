@@ -201,3 +201,5 @@
        (default +bindings +smartparens))
 
 
+
+;; (setq nerd-icons-dired-mode t)

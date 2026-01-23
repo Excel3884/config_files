@@ -74,15 +74,16 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;;
 
-;; CUSTOM STUFF
+
+
+
+;; Custom configuration
 
 ;; Set custom font
 (setq doom-font (font-spec :family "JetBrains Mono Nerd Font" :size 20))
 
-; Source - https://stackoverflow.com/a
-; Posted by E. Sambo
-; Retrieved 2026-01-08, License - CC BY-SA 3.0
 ;;Exit insert mode by pressing j and then j quickly
 (setq key-chord-two-keys-delay 0.5)
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
@@ -92,13 +93,24 @@
 (setq fancy-splash-image (concat doom-user-dir "doomEmacsRouge_scaled.svg"))
 (setq +doom-dashboard-banner-padding '(4 . 4) )
 
-;; (setq org-bullets-bullet-list '("◉" "○" "✸" "❖" "✮" "✱"))
-
+;; Org settings
 (setq deft-directory "~/Documents/org/"
       deft-extensions '("org" "txt")
       deft-recursive t)
 
 (setq org-directory "~/Documents/org/")
+
+(setq org-agenda-files '("~/Documents/org/"))
+
+;; inspired by DT's config
+(custom-theme-set-faces!
+'doom-one
+'(org-level-5 :inherit outline-3 :height 1.0)
+'(org-level-4 :inherit outline-3 :height 1.0)
+'(org-level-3 :inherit outline-3 :height 1.1)
+'(org-level-2 :inherit outline-2 :height 1.2)
+'(org-level-1 :inherit outline-1 :height 1.3)
+'(org-document-title  :height 1.5 :bold t :underline nil))
 
 (setq org-journal-date-prefix "#+TITLE: "
       org-journal-time-prefix ""
@@ -108,6 +120,12 @@
 
 (setq org-roam-directory "~/Documents/roam")
 
-(use-package! p4-ts-mode)
+;; Markdown settings (inspired by DT's config)
+(custom-set-faces
+ '(markdown-header-face ((t (:inherit font-lock-function-name-face :weight bold :family "variable-pitch"))))
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.3))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.2))))
+ '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 1.1))))
+ '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 1.0))))
+ '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 1.0)))))
 
-(setq org-agenda-files '("~/Documents/org/"))
