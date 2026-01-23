@@ -141,3 +141,5 @@
                                 ("mkv" . "mpv")
                                 ("mp4" . "mpv")
                                 ("pdf" . "okular"))))
+
+(use-package! p4-ts-mode)
