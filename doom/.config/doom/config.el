@@ -129,3 +129,6 @@
  '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 1.0))))
  '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 1.0)))))
 
+;; Dired (inspired by DT's config)
+(setq delete-by-moving-to-trash t
+      trash-directory "~/.local/share/Trash/files/")
