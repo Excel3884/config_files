@@ -143,3 +143,11 @@
                                 ("pdf" . "okular"))))
 
 (use-package! p4-ts-mode)
+
+(use-package centaur-tabs
+  :demand
+  :config
+  (centaur-tabs-mode t)
+  :bind
+  ("C-j" . centaur-tabs-backward)
+  ("C-k" . centaur-tabs-forward))
