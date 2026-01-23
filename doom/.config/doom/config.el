@@ -132,3 +132,12 @@
 ;; Dired (inspired by DT's config)
 (setq delete-by-moving-to-trash t
       trash-directory "~/.local/share/Trash/files/")
+
+(use-package dired-open
+  :config
+  (setq dired-open-extensions '(("gif" . "sxiv")
+                                ("jpg" . "sxiv")
+                                ("png" . "sxiv")
+                                ("mkv" . "mpv")
+                                ("mp4" . "mpv")
+                                ("pdf" . "okular"))))

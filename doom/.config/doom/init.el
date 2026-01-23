@@ -202,4 +202,4 @@
 
 
 
-;; (setq nerd-icons-dired-mode t)
+
