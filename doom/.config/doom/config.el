@@ -118,7 +118,7 @@
       org-journal-date-format "%a, %Y-%m-%d"
       org-journal-file-format "%Y-%m-%d.org")
 
-(setq org-roam-directory "~/Documents/roam")
+(setq org-roam-directory "~/Documents/org/roam")
 
 ;; Markdown settings (inspired by DT's config)
 (custom-set-faces
@@ -142,5 +142,6 @@
                                 ("mp4" . "mpv")
                                 ("pdf" . "okular"))))
 
+;; enable p4 syntax support
 (use-package! p4-ts-mode)
 
