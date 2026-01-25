@@ -145,6 +145,3 @@
 ;; enable p4 syntax support
 (use-package! p4-ts-mode)
 
-;; Moving between tabs (Inspired by Joshuablais )
-(map! :n "<C-tab>"   #'centaur-tabs-forward    ; normal mode only
-      :n "<C-iso-lefttab>" #'centaur-tabs-backward)  ; normal mode only
