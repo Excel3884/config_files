@@ -84,10 +84,18 @@
 ;; Set custom font
 (setq doom-font (font-spec :family "JetBrains Mono Nerd Font" :size 20))
 
-;;Exit insert mode by pressing j and then j quickly
-(setq key-chord-two-keys-delay 0.5)
-(key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
-(key-chord-mode 1)
+
+;; Evil mode setup (Inspired by Joshuablais)
+;; Evil-escape sequence
+(setq-default evil-escape-key-sequence "jj")
+(setq-default evil-escape-delay 0.5)
+; Don't move cursor back when exiting insert mode
+(setq evil-move-cursor-back nil)
+;; granular undo with evil mode
+(setq evil-want-fine-undo t)
+;; Enable paste from system clipboard with C-v in insert mode
+(evil-define-key 'insert global-map (kbd "C-v") 'clipboard-yank)
+
 
 ;; Change splash screen image
 (setq fancy-splash-image (concat doom-user-dir "doomEmacsRouge_scaled.svg"))
@@ -145,3 +153,7 @@
 ;; enable p4 syntax support
 (use-package! p4-ts-mode)
 
+
+;; Moving between tabs configuration (inspired by Joshuablais)
+(map! :ni "<C-tab>"   #'centaur-tabs-forward
+      :ni "<C-iso-lefttab>" #'centaur-tabs-backward)
