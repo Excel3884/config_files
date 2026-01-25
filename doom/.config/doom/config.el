@@ -40,7 +40,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+;; (setq org-directory "~/org/")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -145,3 +145,6 @@
 ;; enable p4 syntax support
 (use-package! p4-ts-mode)
 
+;; Moving between tabs (Inspired by Joshuablais )
+(map! :n "<C-tab>"   #'centaur-tabs-forward    ; normal mode only
+      :n "<C-iso-lefttab>" #'centaur-tabs-backward)  ; normal mode only
