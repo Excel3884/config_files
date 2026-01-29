@@ -148,7 +148,9 @@
                                 ("png" . "sxiv")
                                 ("mkv" . "mpv")
                                 ("mp4" . "mpv")
-                                ("pdf" . "okular"))))
+                                ("pdf" . "okular")
+                                ("xlsx". "libreoffice")
+                                ("odt" . "libreoffice"))))
 
 ;; enable p4 syntax support
 (use-package! p4-ts-mode)

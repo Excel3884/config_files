@@ -9,6 +9,7 @@ size = 16
 
 [window]
 opacity = 1
+padding = {x = 5, y = 5}
 
 [mouse]
 

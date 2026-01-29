@@ -337,16 +337,17 @@ for_window [title="Welcome to Xbox"] floating enable
 for_window [title="MediaInfo"] floating enable
 for_window [title=".+.zip"] floating enable
 for_window [title="win0"] floating enable
+for_window [class="xtightvncviewer"] floating enable
 
 # disable focus change due to mouse movement
 # focus_follows_mouse no
 
+# enable greek language layout
 exec_always --no-startup-id setxkbmap -layout us,gr -option "grp:win_space_toggle" -model pc105 &
 
+# Brightness controls for media keys
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
-
-for_window [class="xtightvncviewer"] floating enable
 
 # start polkit for authentication in i3
 exec --no-startup-id /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
