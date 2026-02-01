@@ -298,7 +298,6 @@ bindsym Mod1+Shift+a exec xrandr --output eDP-1 --auto
 bindsym Mod1+Shift+s exec --no-startup-id /home/angel/.screenlayout/home_monitor_layout.sh &
 bindsym Mod1+Shift+d exec --no-startup-id /home/angel/.screenlayout/work_monitor_layout.sh &
 
-
 # shutdown, reboot, lock screen
 set $Locker i3lock -i /home/angel/Pictures/nature_wallpaper.png && sleep 1
 
@@ -355,4 +354,5 @@ exec --no-startup-id /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication
 # start emacs daemon
 exec --no-startup-id /usr/bin/emacs --daemon &
 
+# add icons and padding to tab titles
 for_window [all] title_window_icon padding 10px
