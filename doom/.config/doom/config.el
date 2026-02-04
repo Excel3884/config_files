@@ -186,7 +186,7 @@
 ;;                ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
 ;; (setq TeX-engine 'luatex)
 
-;; Latex templates by GeneKao on GitHub
+;; Latex template by GeneKao on GitHub
 (setq org-latex-pdf-process
       '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
 
