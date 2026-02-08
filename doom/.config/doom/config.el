@@ -150,7 +150,8 @@
                                 ("mp4" . "mpv")
                                 ("pdf" . "okular")
                                 ("xlsx". "libreoffice")
-                                ("odt" . "libreoffice"))))
+                                ("odt" . "libreoffice")
+                                ("docx" . "libreoffice"))))
 
 ;; enable p4 syntax support
 (use-package! p4-ts-mode)
