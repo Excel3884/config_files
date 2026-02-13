@@ -154,7 +154,7 @@
                                 ("docx" . "libreoffice"))))
 
 ;; enable p4 syntax support
-(use-package! p4-ts-mode)
+(use-package p4-ts-mode)
 
 
 ;; Moving between tabs configuration (inspired by Joshuablais)
