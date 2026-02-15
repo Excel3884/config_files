@@ -351,10 +351,10 @@ exec --no-startup-id /usr/bin/emacs --daemon &
 for_window [all] title_window_icon padding 10px
 
 # start Nextcloud
-exec_always --no-startup-id /home/angel/Desktop/Nextcloud-4.0.6-x86_64.AppImage &
+exec --no-startup-id /home/angel/Desktop/Nextcloud-4.0.6-x86_64.AppImage &
 
 # start Syncthing
-exec_always --no-startup-id syncthing serve --no-browser --logfile=default &
+exec --no-startup-id syncthing serve --no-browser --logfile=default &
 
 # start KeepassXC
-exec_always --no-startup-id keepassxc --minimized &
+exec --no-startup-id keepassxc --minimized &
