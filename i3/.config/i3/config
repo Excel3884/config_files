@@ -335,7 +335,7 @@ for_window [title="MediaInfo"] floating enable
 # focus_follows_mouse no
 
 # enable greek language layout
-exec_always --no-startup-id setxkbmap -layout us,gr -option "grp:win_space_toggle" -model pc105 &
+exec --no-startup-id setxkbmap -layout us,gr -option "grp:win_space_toggle" -model pc105 &
 
 # Brightness controls for media keys
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
@@ -349,3 +349,12 @@ exec --no-startup-id /usr/bin/emacs --daemon &
 
 # add icons and padding to tab titles
 for_window [all] title_window_icon padding 10px
+
+# start Nextcloud
+exec_always --no-startup-id /home/angel/Desktop/Nextcloud-4.0.6-x86_64.AppImage &
+
+# start Syncthing
+exec_always --no-startup-id syncthing serve --no-browser --logfile=default &
+
+# start KeepassXC
+exec_always --no-startup-id keepassxc --minimized &
