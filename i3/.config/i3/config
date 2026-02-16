@@ -335,7 +335,7 @@ for_window [title="MediaInfo"] floating enable
 # focus_follows_mouse no
 
 # enable greek language layout
-exec --no-startup-id setxkbmap -layout us,gr -option "grp:win_space_toggle" -model pc105 &
+exec_always --no-startup-id setxkbmap -layout us,gr -option "grp:win_space_toggle" -model pc105 &
 
 # Brightness controls for media keys
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
