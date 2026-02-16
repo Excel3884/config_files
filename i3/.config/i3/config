@@ -358,3 +358,6 @@ exec --no-startup-id syncthing serve --no-browser --logfile=default &
 
 # start KeepassXC
 exec --no-startup-id keepassxc --minimized &
+
+# enable touchpad on i3
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
