@@ -362,5 +362,3 @@ exec --no-startup-id syncthing serve --no-browser --logfile=default &
 # enable touchpad on i3
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &
 
-# start Bitwarden
-exec --no-start-up-id flatpak run com.bitwarden.desktop &
