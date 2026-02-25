@@ -1,4 +1,4 @@
-feh --bg-scale /home/angel/Pictures/nature_wallpaper.png &
+feh --bg-scale /home/angel/Pictures/mountains_n_starry_sky.png &
 dunst &
 # python3 /home/angel/Documents/Daily-bing-walls/daily.py &
 # setxkbmap -layout us,gr -option 'grp:win_space_toggle' -model pc105 &

@@ -303,7 +303,7 @@ bindsym Mod1+Shift+s exec --no-startup-id /home/angel/.screenlayout/home_monitor
 bindsym Mod1+Shift+d exec --no-startup-id /home/angel/.screenlayout/work_monitor_layout.sh &
 
 # shutdown, reboot, lock screen
-set $Locker i3lock -i /home/angel/Pictures/nature_wallpaper.png && sleep 1
+set $Locker i3lock -i /home/angel/Pictures/mountains_n_starry_sky.png && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
