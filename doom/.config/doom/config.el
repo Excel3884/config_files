@@ -229,3 +229,7 @@
                ("\\subsection{%s}" . "\\subsection*{%s}")
                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
                ("\\paragraph{%s}" . "\\paragraph*{%s}")))
+
+
+(after! org
+        (add-hook 'after-save-hook #'org-babel-tangle))

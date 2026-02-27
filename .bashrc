@@ -18,6 +18,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Nord Theme Static Colors
 PS1='\[\e[1;31m\][\[\e[1;32m\]\u@\h \[\e[1;34m\]\W \[\e[1;31m\]]\[\e[1;36m\]\$ \[\e[0m\]'
 
+# Use vim for manpages for pretty colors
 export MANPAGER="vim -M +MANPAGER -"
 
 # setup environment variable for vivado
