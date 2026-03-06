@@ -235,4 +235,4 @@
 (after! org
         (add-hook 'after-save-hook #'org-babel-tangle))
 
-(setq visual-line-mode t)
+(setq visual-line-mode 't)
