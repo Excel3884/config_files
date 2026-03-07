@@ -1,0 +1,5 @@
+#+title: Simple Terminal
+
+This is [[https://st.suckless.org/][st]], developed by the suckless team.
+
+This repository is a fork of [[https://github.com/siduck/st][siduck's configuration]].

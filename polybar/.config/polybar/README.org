@@ -1,3 +1,5 @@
 #+title: Polybar
 
 [[file:polybar_screenshot.png]]
+
+The polybar configuration is based on emgyrz's [[https://github.com/emgyrz/polybar-gruvbox-theme][configuration]].
