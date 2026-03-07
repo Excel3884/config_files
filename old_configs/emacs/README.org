@@ -1,0 +1,3 @@
+#+title: Old (GNU) Emacs Configuration
+
+This configuration was developed through the tutorials by [[https://www.youtube.com/@uncledave2063][Uncle Dave]].

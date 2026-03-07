@@ -1,3 +1,5 @@
 #+title: Configuration files
 
 This repository contains configuration files for various programs on Linux.
+
+The folder =old_configs= contains configurations that I do not use anymore.
