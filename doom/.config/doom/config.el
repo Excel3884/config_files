@@ -109,7 +109,8 @@
 
 (setq org-directory "~/Documents/org/")
 
-(setq org-agenda-files '("~/Documents/org/"))
+(setq org-agenda-files '("~/Documents/org/"
+                         "~/Documents/org/journal/"))
 
 ;; inspired by DT's config
 (custom-theme-set-faces!
