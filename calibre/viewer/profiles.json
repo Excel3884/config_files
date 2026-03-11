@@ -1,0 +1,15 @@
+{
+  "viewer:": {
+    "default": {
+      "__timestamp__": "2026-03-11T23:22:54.866094+00:00",
+      "base_font_size": 24,
+      "columns_per_screen": {
+        "landscape": 1,
+        "portrait": 1
+      },
+      "current_color_scheme": "sepia-light",
+      "margin_left": 200,
+      "margin_right": 200
+    }
+  }
+}
