@@ -5,8 +5,9 @@
 --ignore=.git
 --ignore=.gitignore
 --ignore=README.*
-# to be configured
+# to be configured to be put in home folder
 --ignore=newsboat
 --ignore=vim
 --ignore=xsessionrc
 --ignore=zathura
+--ignore=screenlayout
