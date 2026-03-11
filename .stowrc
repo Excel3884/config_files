@@ -1,0 +1,12 @@
+--target=~/.config
+--ignore=.stowrc
+--ignore=old_configs
+--ignore=.bashrc
+--ignore=.git
+--ignore=.gitignore
+--ignore=README.*
+# to be configured
+--ignore=newsboat
+--ignore=vim
+--ignore=xsessionrc
+--ignore=zathura
