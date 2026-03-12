@@ -236,4 +236,6 @@
 (after! org
         (add-hook 'after-save-hook #'org-babel-tangle))
 
-(setq visual-line-mode 't)
+(setq visual-line-mode 't) ;; to be fixed
+
+(setq avy-all-windows 't) ;; enable avy for all visible windows
