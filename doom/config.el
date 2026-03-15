@@ -99,7 +99,7 @@
 
 
 ;; Change splash screen image
-(setq fancy-splash-image (concat doom-user-dir "doomEmacsRouge_scaled.svg"))
+(setq fancy-splash-image (concat doom-user-dir "images/doomEmacsRouge_scaled.svg"))
 (setq +doom-dashboard-banner-padding '(2 . 2) )
 
 ;; Org settings
@@ -233,9 +233,29 @@
                ("\\paragraph{%s}" . "\\paragraph*{%s}")))
 
 
+;; auto-tangle after saving file
 (after! org
         (add-hook 'after-save-hook #'org-babel-tangle))
 
 (setq visual-line-mode 't) ;; to be fixed
 
 (setq avy-all-windows 't) ;; enable avy for all visible windows
+
+;; org-pomodoro configuration
+(after! org-pomodoro
+  (setq
+
+        ;; cnfigure timer duration
+        org-pomodoro-length 25
+        org-pomodoro-short-break-length 5
+        org-pomodoro-long-break-length 15
+
+        ;; configure sounds for timeouts
+        org-pomodoro-finished-sound "~/config_files/doom/sounds/pomodo-sound-emacs.mp3"
+        org-pomodoro-short-break-sound "~/config_files/doom/sounds/pomodo-sound-emacs.mp3"
+        org-pomodoro-long-break-sound "~/config_files/doom/sounds/pomodo-sound-emacs.mp3"
+
+        ;; enable sound playback
+        org-pomodoro-finished-sound-p t
+        org-pomodoro-short-break-sound-p t
+        org-pomodoro-long-break-sound-p t))

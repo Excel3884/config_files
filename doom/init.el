@@ -165,7 +165,8 @@
         +pretty
         +journal
         +roam2
-        +pandoc)
+        +pandoc
+        +pomodoro)
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;graphviz          ; diagrams for confusing yourself even more
