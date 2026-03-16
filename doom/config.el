@@ -145,15 +145,21 @@
 
 (use-package dired-open
   :config
-  (setq dired-open-extensions '(("gif" . "sxiv")
+  (setq dired-open-extensions '(
+                                ;; media
+                                ("gif" . "sxiv")
                                 ("jpg" . "sxiv")
                                 ("png" . "sxiv")
                                 ("mkv" . "mpv")
                                 ("mp4" . "mpv")
+                                ;; pdfs
                                 ("pdf" . "okular")
-                                ("xlsx". "libreoffice")
+                                ;; office
+                                ("docx" . "libreoffice")
                                 ("odt" . "libreoffice")
-                                ("docx" . "libreoffice"))))
+                                ("pptx" . "libreoffice")
+                                ("odp" . "libreoffice")
+                                ("xlsx". "libreoffice"))))
 
 ;; enable p4 syntax support
 (use-package p4-ts-mode)
