@@ -265,3 +265,8 @@
         org-pomodoro-finished-sound-p t
         org-pomodoro-short-break-sound-p t
         org-pomodoro-long-break-sound-p t))
+
+;; emms keybindings
+(map! :leader
+       :desc "Emms pause track" "e x" #'emms-pause
+       :desc "Emms play selected file" "e p" #'emms-play-dired)
