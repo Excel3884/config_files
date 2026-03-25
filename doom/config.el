@@ -243,7 +243,7 @@
 (after! org
         (add-hook 'after-save-hook #'org-babel-tangle))
 
-(global-visual-line-mode)
+(global-visual-line-mode) ;; wrap text everywhere
 
 (setq avy-all-windows 't) ;; enable avy for all visible windows
 
@@ -270,3 +270,6 @@
 (map! :leader
        :desc "Emms pause track" "e x" #'emms-pause
        :desc "Emms play selected file" "e p" #'emms-play-dired)
+
+;; enabled centered cursor everywhere
+(global-centered-cursor-mode)
