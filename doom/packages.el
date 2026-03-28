@@ -64,3 +64,4 @@
 ;; (package! p4-16-mode)
 (package! nerd-icons-dired)
 (package! centered-cursor-mode)
+(package! olivetti)

@@ -271,5 +271,5 @@
        :desc "Emms pause track" "e x" #'emms-pause
        :desc "Emms play selected file" "e p" #'emms-play-dired)
 
-;; enabled centered cursor everywhere
-(global-centered-cursor-mode)
+;; enable centered cursor everywhere
+;; (global-centered-cursor-mode)
