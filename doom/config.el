@@ -273,3 +273,7 @@
 
 ;; enable centered cursor everywhere
 ;; (global-centered-cursor-mode)
+
+;; calendar
+;; set first day of the week to Monday
+(setq calendar-week-start-day 1)
