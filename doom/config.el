@@ -103,14 +103,14 @@
 (setq +doom-dashboard-banner-padding '(2 . 2) )
 
 ;; Org settings
-(setq deft-directory "~/Documents/org/"
+(setq deft-directory "~/Nextcloud/org/"
       deft-extensions '("org" "txt")
       deft-recursive t)
 
-(setq org-directory "~/Documents/org/")
+(setq org-directory "~/Nextcloud/org/")
 
-(setq org-agenda-files '("~/Documents/org/"
-                         "~/Documents/org/journal/"))
+(setq org-agenda-files '("~/Nextcloud/org/"
+                         "~/Nextcloud/org/journal/"))
 
 ;; inspired by DT's config
 (custom-theme-set-faces!
@@ -128,7 +128,7 @@
       org-journal-date-format "%a, %Y-%m-%d"
       org-journal-file-format "%Y-%m-%d.org")
 
-(setq org-roam-directory "~/Documents/org/roam")
+(setq org-roam-directory "~/Nextcloud/org/roam")
 
 ;; Markdown settings (inspired by DT's config)
 (custom-set-faces
