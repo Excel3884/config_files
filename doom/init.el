@@ -103,7 +103,7 @@
         +docsets
         +offline)
        ;;llm               ; when I said you needed friends, I didn't mean...
-       ;;(lsp +eglot)      ; M-x vscode
+       (lsp +eglot)      ; M-x vscode
        magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
@@ -207,3 +207,15 @@
        (default +bindings +smartparens))
 
 
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               '(org-mode . ("/home/linuxbrew/.linuxbrew/bin/harper-ls" "--stdio"))))
+
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               '(markdown-mode . ("/home/linuxbrew/.linuxbrew/bin/harper-ls" "--stdio")))
+  (add-to-list 'eglot-server-programs
+               '(org-mode . ("/home/linuxbrew/.linuxbrew/bin/harper-ls" "--stdio"))))
+
+(add-hook 'markdown-mode-hook #'eglot-ensure)
+(add-hook 'org-mode-hook #'eglot-ensure)
