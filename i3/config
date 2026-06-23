@@ -64,7 +64,7 @@ bindsym Mod1+p exec rofi -show drun
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym Mod1+o exec --no-startup-id i3-dmenu-desktop
+# bindsym Mod1+o exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym Mod1+$left focus left
@@ -280,11 +280,13 @@ bindsym Mod1+r mode "resize"
 exec i3-config-wizard
 
 
-# Custom key bindings
+# Custom key bindings to launch programs
 bindsym Mod1+Shift+b exec --no-startup-id librewolf
 # bindsym Mod1+Shift+u exec --no-startup-id qutebrowser
-# bindsym Mod1+Shift+t exec --no-startup-id thunderbird
+# bindsym Mod1+Shift+t exec --no-id-startup thunderbird
 bindsym Mod1+Shift+e exec --no-startup-id emacsclient -c -a vim
+bindsym Mod1+Shift+f exec --no-startup-id thunar
+
 #jump between workspaces
 bindsym Mod1+n workspace next
 bindsym Mod1+b workspace prev
