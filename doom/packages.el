@@ -65,3 +65,4 @@
 (package! nerd-icons-dired)
 (package! centered-cursor-mode)
 (package! olivetti)
+(package! fontaine)

@@ -218,4 +218,4 @@
                '(org-mode . ("/home/linuxbrew/.linuxbrew/bin/harper-ls" "--stdio"))))
 
 (add-hook 'markdown-mode-hook #'eglot-ensure)
-(add-hook 'org-mode-hook #'eglot-ensure)
+;; (add-hook 'org-mode-hook #'eglot-ensure)

@@ -277,3 +277,23 @@
 ;; calendar
 ;; set first day of the week to Monday
 (setq calendar-week-start-day 1)
+
+
+(use-package fontaine
+  :demand t
+  :config
+  ;; read this first: https://protesilaos.com/emacs/fontaine
+    (setq fontaine-presets
+        '((writing
+            :default-family "Liberation Sans"
+            :default-height 150
+            :line-spacing 1
+            )
+            (coding
+            :default-family "JetBrains Mono Nerd Font"
+            :default-height 150
+            :line-spacing 1
+            ))))
+
+(map! :leader
+      :desc "Toggle fontaine preset" "e f" #'fontaine-toggle-preset)
