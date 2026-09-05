@@ -285,7 +285,7 @@
   ;; read this first: https://protesilaos.com/emacs/fontaine
     (setq fontaine-presets
         '((writing
-            :default-family "Liberation Sans"
+            :default-family "Inter"
             :default-height 150
             :line-spacing 1
             )
