@@ -83,7 +83,7 @@
 ;; Custom configuration
 
 ;; Set custom font
-(setq doom-font (font-spec :family "JetBrains Mono Nerd Font" :size 20))
+(setq doom-font (font-spec :family "Iosevka NF" :size 22))
 
 
 ;; Evil mode setup (Inspired by Joshuablais)
@@ -290,7 +290,7 @@
             :line-spacing 1
             )
             (coding
-            :default-family "JetBrains Mono Nerd Font"
+            :default-family "Iosevka NF"
             :default-height 150
             :line-spacing 1
             ))))
