@@ -60,9 +60,9 @@
 ;; (package! org-bullets)
 ;;(package! centered-cursor-mode)
 (package! tree-sitter)
-(package! p4-ts-mode)
+(package! p4-ts-mode) ;; p4 syntax highlighting
 ;; (package! p4-16-mode)
-(package! nerd-icons-dired)
-(package! centered-cursor-mode)
-(package! olivetti)
-(package! fontaine)
+(package! nerd-icons-dired) ;; icons in dired
+(package! centered-cursor-mode) ;; force cursor in the centre of the screen (disabled for now)
+(package! olivetti) ;; reading mode
+(package! fontaine) ;; switch between different fonts
