@@ -283,15 +283,16 @@
   :demand t
   :config
   ;; read this first: https://protesilaos.com/emacs/fontaine
+  ;; NOTE: You may need to run nerd-icons-install-fonts to make icons work on Doom Emacs
     (setq fontaine-presets
         '((writing
             :default-family "Inter"
-            :default-height 150
+            :default-height 160
             :line-spacing 1
             )
             (coding
             :default-family "Iosevka NF"
-            :default-height 150
+            :default-height 160
             :line-spacing 1
             ))))
 
