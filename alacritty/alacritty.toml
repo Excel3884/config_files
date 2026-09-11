@@ -4,8 +4,9 @@ import = [
 ]
 
 [font]
-normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
-size = 16
+# normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
+normal = { family = "Iosevka NF", style = "Regular" }
+size = 18
 
 [window]
 opacity = 1
