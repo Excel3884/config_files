@@ -153,7 +153,8 @@
                                 ("mkv" . "mpv")
                                 ("mp4" . "mpv")
                                 ;; pdfs
-                                ("pdf" . "okular")
+                                ;; ("pdf" . "okular")
+                                ("pdf" . "zathura")
                                 ;; office
                                 ("docx" . "libreoffice")
                                 ("odt" . "libreoffice")
@@ -297,4 +298,4 @@
             ))))
 
 (map! :leader
-      :desc "Toggle fontaine preset" "e f" #'fontaine-toggle-preset)
+      :desc "Toggle fontaine preset" "e f" #'fontaine-toggle-preset) ;; shortcut to switch between different fonts
