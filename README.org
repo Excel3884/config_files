@@ -1,5 +1,16 @@
-#+title: Configuration files
+#+title: Configuration Files
 
+* Introduction
 This repository contains configuration files for various programs on Linux.
 
 The folder =old_configs= contains configurations that I do not use anymore.
+
+* Other system settings
+- *Theme:* Adwaita Dark
+- *Icons:* [[https://github.com/shimmerproject/elementary-xfce][Elementary Xfce dark]]
+** Fonts
+- *Sans:* Inter
+- *Monospace:* Iosevka
+** Audio
+- [[https://github.com/wwmm/easyeffects][EasyEffects]]
+- [[https://gist.github.com/jtrv/47542c8be6345951802eebcf9dc7da31][Mic Configuration]]
