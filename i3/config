@@ -281,7 +281,8 @@ exec i3-config-wizard
 
 
 # Custom key bindings to launch programs
-bindsym Mod1+Shift+b exec --no-startup-id librewolf
+# bindsym Mod1+Shift+b exec --no-startup-id librewolf
+bindsym Mod1+Shift+b exec --no-startup-id helium
 # bindsym Mod1+Shift+u exec --no-startup-id qutebrowser
 # bindsym Mod1+Shift+t exec --no-id-startup thunderbird
 bindsym Mod1+Shift+e exec --no-startup-id emacsclient -c -a vim
